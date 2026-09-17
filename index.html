@@ -44,7 +44,7 @@
         header p {
             font-size: 1.2rem;
             color: #cbd5e1;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 1.5rem auto;
         }
 
@@ -62,22 +62,44 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 2.5rem 2rem;
         }
 
         h2 {
             color: var(--primary);
             border-bottom: 3px solid var(--secondary);
             padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-size: 1.8rem;
+            margin-top: 1.5rem;
+        }
+
+        /* --- BIOGRAFIA (SOBRE MIM) --- */
+        .about-section {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 6px solid var(--secondary);
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+
+        .about-section p:last-child {
+            margin-bottom: 0;
         }
 
         /* --- GRELHA DE PROJETOS (CARDS) --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .card {
@@ -96,14 +118,20 @@
         .card h3 {
             color: var(--primary);
             margin-bottom: 0.5rem;
+            font-size: 1.2rem;
         }
 
-        .card .award {
+        .card .tag {
             color: var(--secondary);
             font-weight: bold;
             font-size: 0.85rem;
             margin-bottom: 0.5rem;
             text-transform: uppercase;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4b5563;
         }
 
         /* --- CONTACTO / RODAPÉ --- */
@@ -126,35 +154,77 @@
     <!-- CABEÇALHO -->
     <header>
         <h1>Paulo Fernando Dias Ribeiro</h1>
-        <p>Professor de Matemática e Ciências | Especialista em Transição Digital, Robótica e Inovação Educativa</p>
+        <p>Professor de Matemática e Ciências | Especialista em Transição Digital, Liderança TIC e Inovação Educativa</p>
         <span class="badge">Vouzela, Portugal</span>
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
         
-        <h2>Projetos de Inovação & Software Premiado</h2>
+        <!-- SECÇÃO SOBRE MIM -->
+        <h2>Sobre Mim</h2>
+        <div class="about-section">
+            <p>Sou um profissional de educação apaixonado pelo impacto que a tecnologia pode ter na aprendizagem. Licenciado em Ensino de Matemática e Ciências da Natureza, combinei o meu percurso pedagógico com a frequência da Licenciatura em Engenharia Informática, desenvolvendo um perfil único focado na inovação digital em ambiente escolar.</p>
+            <p>Ao longo de mais de duas décadas de carreira, tenho atuado na vanguarda da transição digital nas escolas: desde o desenvolvimento e programação de software educativo premiado a nível nacional, até à coordenação estratégica de equipas TIC e formação contínua de docentes e funcionários administrativos.</p>
+        </div>
         
+        <!-- SECÇÃO 1 -->
+        <h2>Projetos de Inovação & Software Premiado</h2>
         <div class="projects-grid">
-            <!-- Projeto 1 -->
             <div class="card">
-                <div class="award">🏆 1.º Lugar Nacional</div>
+                <div class="tag">🏆 1.º Lugar Nacional</div>
                 <h3>Nós pelo Lince e o Lince por Nós</h3>
-                <p>Desenvolvimento e programação de um jogo informático pedagógico em parceria com o Zoo de Lisboa (2016).</p>
+                <p>Desenvolvimento e programação integral de um jogo informático pedagógico em parceria com o Zoo de Lisboa (2016).</p>
             </div>
 
-            <!-- Projeto 2 -->
             <div class="card">
-                <div class="award">🎖️ Prémio Ciência na Escola</div>
+                <div class="tag">🎖️ Prémio Ciência na Escola</div>
                 <h3>Jogo do 24 & Ilha Lexia</h3>
-                <p>Criação de software educativo interativo para quadros multimédia nas áreas de Matemática e Língua Portuguesa (Fundação Ilídio Pinho).</p>
+                <p>Criação de software educativo interativo para quadros multimédia focado na aprendizagem da Matemática e Língua Portuguesa (Fundação Ilídio Pinho).</p>
             </div>
 
-            <!-- Projeto 3 -->
             <div class="card">
-                <div class="award">🌱 Sustentabilidade & Ecologia</div>
-                <h3>Projetos Biospy, Hidrosfera & ReCafé</h3>
-                <p>Dinamização de projetos científicos e tecnológicos focados no ambiente, reciclagem e sensores biológicos com a comunidade escolar.</p>
+                <div class="tag">🌱 Sustentabilidade & Ecologia</div>
+                <h3>Biospy, Hidrosfera & ReCafé</h3>
+                <p>Dinamização de projetos científicos escolares financiados, unindo tecnologia, ambiente e sensores biológicos.</p>
+            </div>
+        </div>
+
+        <!-- SECÇÃO 2 -->
+        <h2>Liderança & Transição Digital nas Escolas</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="tag">💻 Coordenação Estratégica</div>
+                <h3>Coordenador TIC / Equipa PTE</h3>
+                <p>Responsável pela gestão e planeamento tecnológico, migração de redes locais (LAN) e implementação do Plano Tecnológico da Educação (2007-2012).</p>
+            </div>
+
+            <div class="card">
+                <div class="tag">📊 Gestão de Dados & Exames</div>
+                <h3>Técnico Responsável PAEB/ENEB</h3>
+                <p>Supervisão técnica de plataformas nacionais, tratamento estatístico de dados e apoio à avaliação e exames nacionais no Agrupamento de Escolas.</p>
+            </div>
+
+            <div class="card">
+                <div class="tag">🤖 Futuro & Tecnologia</div>
+                <h3>Clubes de Programação e Robótica</h3>
+                <p>Implementação e dinamização de atividades práticas de introdução à robótica para alunos do 1.º e 2.º ciclo.</p>
+            </div>
+        </div>
+
+        <!-- SECÇÃO 3 -->
+        <h2>Capacitação & Formação de Adultos</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="tag">🏫 Formação de Docentes</div>
+                <h3>Inovação em Sala de Aula</h3>
+                <p>Dinamizador de oficinas de formação acreditada sobre Quadros Interativos Multimédia, Segurança na Internet, Cyberbullying e ferramentas Cloud.</p>
+            </div>
+
+            <div class="card">
+                <div class="tag">💼 Modernização Administrativa</div>
+                <h3>Software Escola 360 & Ferramentas Digitais</h3>
+                <p>Formador da Direção-Geral da Educação (DGE) focado na capacitação digital de Assistentes Técnicos e Operacionais da região de Lafões.</p>
             </div>
         </div>
 
