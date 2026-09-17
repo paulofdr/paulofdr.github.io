@@ -25,6 +25,37 @@
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* MENU FIXO */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0f172a;
+            padding: 0.8rem 2rem;
+            z-index: 999;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
         }
 
         /* HEADER */
@@ -32,7 +63,8 @@
             background: linear-gradient(135deg, var(--primary), #0f172a);
             color: var(--white);
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem 4rem;
+            margin-top: 3rem;
         }
 
         header h1 {
@@ -102,7 +134,7 @@
             line-height: 1.75;
         }
 
-        /* GRID DE PROJETOS */
+        /* GRID */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -138,40 +170,9 @@
             font-size: 1.25rem;
         }
 
-        .card h3 a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .card h3 a:hover {
-            color: var(--secondary);
-        }
-
         .card p {
             font-size: 0.95rem;
             color: #4b5563;
-        }
-
-        /* BOTÕES */
-        .btn-project {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.2s;
-            margin-top: 1rem;
-        }
-
-        .btn-project:hover {
-            background-color: var(--primary);
-            color: var(--white);
         }
 
         /* FOOTER */
@@ -185,20 +186,30 @@
         }
 
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .container {
-                padding: 1.5rem;
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
     </style>
 </head>
 
 <body>
+
+<!-- MENU -->
+<nav>
+    <ul>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#percursos">Percurso</a></li>
+        <li><a href="#timeline">Linha do Tempo</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#voluntariado">Voluntariado</a></li>
+        <li><a href="#competencias">Competências</a></li>
+        <li><a href="#aulas">Aulas</a></li>
+    </ul>
+</nav>
 
 <header>
     <h1>Paulo Fernando Dias Ribeiro</h1>
@@ -208,90 +219,106 @@
 
 <main class="container">
 
-    <h2>Sobre Mim</h2>
-    <div class="about-section">
-        <p>Sou um profissional de educação apaixonado pelo impacto que a tecnologia pode ter na aprendizagem. Licenciado em Ensino de Matemática e Ciências da Natureza, combinei o meu percurso pedagógico com a frequência da Licenciatura em Engenharia Informática, desenvolvendo um perfil único focado na inovação digital em ambiente escolar.</p>
-        <p>Ao longo de mais de duas décadas de carreira, tenho atuado na vanguarda da transição digital nas escolas: desde o desenvolvimento e programação de software educativo premiado a nível nacional, até à coordenação estratégica de equipas TIC e formação contínua de docentes e funcionários administrativos.</p>
-    </div>
+    <!-- SOBRE MIM -->
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="about-section">
+            <p>Sou um profissional de educação apaixonado pelo impacto que a tecnologia pode ter na aprendizagem...</p>
+            <p>Ao longo de mais de duas décadas de carreira, tenho atuado na vanguarda da transição digital nas escolas...</p>
+        </div>
+    </section>
 
     <div class="section-divider"></div>
 
-    <h2>Projetos de Inovação & Software Premiado</h2>
-    <div class="projects-grid">
-
-        <div class="card">
-            <div class="tag">🏆 1.º Lugar Nacional</div>
-            <h3><a href="https://aevouzela.net/lince/jogo/v22/" target="_blank">Nós pelo Lince e o Lince por Nós</a></h3>
-            <p>Desenvolvimento e programação integral de um jogo informático pedagógico focado na preservação ambiental, em parceria com o Zoo de Lisboa (2016).</p>
-            <a href="https://aevouzela.net/lince/jogo/v22/" target="_blank" class="btn-project">Jogar / Ver Projeto →</a>
+    <!-- PERCURSO PROFISSIONAL -->
+    <section id="percursos">
+        <h2>Percurso Profissional</h2>
+        <div class="about-section">
+            <p>Ao longo de mais de duas décadas, desenvolvi um percurso profissional diversificado...</p>
         </div>
-
-        <div class="card">
-            <div class="tag">🎖️ Menção Honrosa Valorpneu</div>
-            <h3><a href="https://microstudio.pt/simtyre/" target="_blank">SimTyre</a></h3>
-            <p>Videojogo educativo e simulador concebido para sensibilizar os mais novos para a gestão, reciclagem e valorização sustentável de pneus usados (Prémio Inov.Ação 2018).</p>
-            <a href="https://microstudio.pt/simtyre/" target="_blank" class="btn-project">Jogar / Ver Simulador →</a>
-        </div>
-
-        <div class="card">
-            <div class="tag">🎖️ 7.ª Edição Ciência na Escola</div>
-            <h3><a href="https://aevouzela.net/jogo24/" target="_blank">Jogo do 24 & Ilha Lexia</a></h3>
-            <p>Software pedagógico para computadores e quadros interativos, desenvolvido para potenciar o cálculo mental e a consolidação aritmética.</p>
-            <a href="https://aevouzela.net/jogo24/" target="_blank" class="btn-project">Ver Software →</a>
-        </div>
-
-        <div class="card">
-            <div class="tag">🌱 9.ª Edição Ciência na Escola</div>
-            <h3><a href="https://www.aevouzela.net/biospy/" target="_blank">BioSpy - Vida Selvagem</a></h3>
-            <p>Projeto de monitorização ambiental com câmaras de vídeo em tempo real, permitindo a observação e recolha de dados biológicos pela comunidade escolar.</p>
-            <a href="https://www.aevouzela.net/biospy/" target="_blank" class="btn-project">Ver Monitorização →</a>
-        </div>
-
-    </div>
+    </section>
 
     <div class="section-divider"></div>
 
-    <h2>Liderança & Transição Digital nas Escolas</h2>
-    <div class="projects-grid">
-
-        <div class="card">
-            <div class="tag">💻 Coordenação Estratégica</div>
-            <h3>Coordenador TIC / Equipa PTE</h3>
-            <p>Responsável pela gestão e planeamento tecnológico, migração de redes locais (LAN) e implementação do Plano Tecnológico da Educação (2007-2012).</p>
+    <!-- LINHA DO TEMPO -->
+    <section id="timeline">
+        <h2>Linha do Tempo da Carreira</h2>
+        <div class="projects-grid">
+            <!-- Cards timeline -->
+            <div class="card"><div class="tag">1999–2004</div><h3>Primeiros anos</h3><p>Lecionei em diversos contextos...</p></div>
+            <div class="card"><div class="tag">2007–2012</div><h3>Coordenação TIC</h3><p>Liderança tecnológica...</p></div>
+            <div class="card"><div class="tag">2008–2022</div><h3>Projetos financiados</h3><p>Software educativo...</p></div>
+            <div class="card"><div class="tag">2010–2014</div><h3>Assessor CFAE</h3><p>Apoio técnico...</p></div>
+            <div class="card"><div class="tag">2021–2025</div><h3>Serviços Administrativos</h3><p>Assistente Técnico...</p></div>
+            <div class="card"><div class="tag">2025–2026</div><h3>Técnico Especializado</h3><p>Gestão de formação...</p></div>
         </div>
-
-        <div class="card">
-            <div class="tag">📊 Gestão de Dados & Exames</div>
-            <h3>Técnico Responsável PAEB/ENEB</h3>
-            <p>Supervisão técnica de plataformas nacionais, tratamento estatístico de dados e apoio à avaliação e exames nacionais.</p>
-        </div>
-
-        <div class="card">
-            <div class="tag">🤖 Futuro & Tecnologia</div>
-            <h3>Clubes de Programação e Robótica</h3>
-            <p>Implementação e dinamização de atividades práticas de introdução à robótica para alunos do 1.º e 2.º ciclo.</p>
-        </div>
-
-    </div>
+    </section>
 
     <div class="section-divider"></div>
 
-    <h2>Capacitação & Formação de Adultos</h2>
-    <div class="projects-grid">
-
-        <div class="card">
-            <div class="tag">🏫 Formação de Docentes</div>
-            <h3>Inovação em Sala de Aula</h3>
-            <p>Dinamizador de oficinas de formação acreditada sobre Quadros Interativos Multimédia, Segurança na Internet, Cyberbullying e ferramentas Cloud.</p>
+    <!-- PROJETOS -->
+    <section id="projetos">
+        <h2>Projetos Financiados & Premiados</h2>
+        <div class="projects-grid">
+            <div class="card"><div class="tag">🏆 1.º Lugar</div><h3>Nós pelo Lince</h3><p>Jogo educativo premiado...</p></div>
+            <div class="card"><div class="tag">🎖️ Menção Honrosa</div><h3>SimTyre</h3><p>Simulador educativo...</p></div>
+            <div class="card"><div class="tag">Fundação Ilídio Pinho</div><h3>Projetos</h3><p>Jogo do 24, BioSpy, Hidrosfera...</p></div>
         </div>
+    </section>
 
-        <div class="card">
-            <div class="tag">💼 Modernização Administrativa</div>
-            <h3>Software Escola 360 & Ferramentas Digitais</h3>
-            <p>Formador da Direção-Geral da Educação (DGE) focado na capacitação digital de Assistentes Técnicos e Operacionais da região de Lafões.</p>
+    <div class="section-divider"></div>
+
+    <!-- FORMAÇÃO -->
+    <section id="formacao">
+        <h2>Formação Acreditada & Atividade como Formador</h2>
+        <div class="about-section">
+            <p>Dinamizei dezenas de ações de formação acreditada...</p>
         </div>
+    </section>
 
-    </div>
+    <div class="section-divider"></div>
+
+    <!-- EVENTOS -->
+    <section id="eventos">
+        <h2>Conferências, Seminários & Jornadas</h2>
+        <div class="about-section">
+            <p>Participei em mais de 40 eventos de formação contínua...</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- VOLUNTARIADO -->
+    <section id="voluntariado">
+        <h2>Associações & Voluntariado</h2>
+        <div class="projects-grid">
+            <div class="card"><div class="tag">Desde 2009</div><h3>ADDA</h3><p>Dirigente associativo...</p></div>
+            <div class="card"><div class="tag">Desde 2014</div><h3>Bombeiros</h3><p>Membro da direção...</p></div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- COMPETÊNCIAS -->
+    <section id="competencias">
+        <h2>Competências Técnicas</h2>
+        <div class="projects-grid">
+            <div class="card"><h3>Programação</h3><p>Software educativo...</p></div>
+            <div class="card"><h3>Redes</h3><p>Migração LAN...</p></div>
+            <div class="card"><h3>Ferramentas Digitais</h3><p>Office, Escola 360...</p></div>
+            <div class="card"><h3>Robótica</h3><p>Clubes de programação...</p></div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- AULAS -->
+    <section id="aulas">
+        <h2>Aulas Particulares de Matemática</h2>
+        <div class="about-section">
+            <p>Desde 1999, leciono Matemática a alunos do Ensino Básico e Secundário...</p>
+        </div>
+    </section>
 
 </main>
 
