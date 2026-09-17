@@ -71,7 +71,7 @@
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
         /* --- BIOGRAFIA (SOBRE MIM) --- */
@@ -109,16 +109,31 @@
             padding: 1.5rem;
             border-top: 4px solid var(--primary);
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card:hover {
             transform: translateY(-5px);
         }
 
+        .card-content {
+            margin-bottom: 1.5rem;
+        }
+
         .card h3 {
-            color: var(--primary);
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
+        }
+
+        .card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .card h3 a:hover {
+            color: var(--secondary);
         }
 
         .card .tag {
@@ -132,6 +147,28 @@
         .card p {
             font-size: 0.95rem;
             color: #4b5563;
+        }
+
+        /* --- ESTILO DOS BOTÕES --- */
+        .btn-project {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s;
+            align-self: flex-start;
+        }
+
+        .btn-project:hover {
+            background-color: var(--primary);
+            color: var(--white);
         }
 
         /* --- CONTACTO / RODAPÉ --- */
@@ -159,7 +196,7 @@
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <div class="container">
+    <main class="container">
         
         <!-- SECÇÃO SOBRE MIM -->
         <h2>Sobre Mim</h2>
@@ -171,22 +208,44 @@
         <!-- SECÇÃO 1 -->
         <h2>Projetos de Inovação & Software Premiado</h2>
         <div class="projects-grid">
+            <!-- PROJETO LINCE -->
             <div class="card">
-                <div class="tag">🏆 1.º Lugar Nacional</div>
-                <h3>Nós pelo Lince e o Lince por Nós</h3>
-                <p>Desenvolvimento e programação integral de um jogo informático pedagógico em parceria com o Zoo de Lisboa (2016).</p>
+                <div class="card-content">
+                    <div class="tag">🏆 1.º Lugar Nacional</div>
+                    <h3><a href="https://aevouzela.net" target="_blank">Nós pelo Lince e o Lince por Nós</a></h3>
+                    <p>Desenvolvimento e programação integral de um jogo informático pedagógico focado na preservação ambiental, em parceria com o Zoo de Lisboa (2016).</p>
+                </div>
+                <a href="https://aevouzela.net" target="_blank" class="btn-project">Jogar / Ver Projeto &rarr;</a>
             </div>
 
+            <!-- PROJETO SIMTYRE -->
             <div class="card">
-                <div class="tag">🎖️ Prémio Ciência na Escola</div>
-                <h3>Jogo do 24 & Ilha Lexia</h3>
-                <p>Criação de software educativo interativo para quadros multimédia focado na aprendizagem da Matemática e Língua Portuguesa (Fundação Ilídio Pinho).</p>
+                <div class="card-content">
+                    <div class="tag">🎖️ Menção Honrosa Valorpneu</div>
+                    <h3><a href="https://microstudio.pt" target="_blank">SimTyre</a></h3>
+                    <p>Videojogo educativo e simulador concebido para sensibilizar os mais novos para a gestão, reciclagem e valorização sustentável de pneus usados (Prémio Inov.Ação 2018).</p>
+                </div>
+                <a href="https://microstudio.pt" target="_blank" class="btn-project">Jogar / Ver Simulador &rarr;</a>
             </div>
 
+            <!-- PROJETO JOGO DO 24 -->
             <div class="card">
-                <div class="tag">🌱 Sustentabilidade & Ecologia</div>
-                <h3>Biospy, Hidrosfera & ReCafé</h3>
-                <p>Dinamização de projetos científicos escolares financiados, unindo tecnologia, ambiente e sensores biológicos.</p>
+                <div class="card-content">
+                    <div class="tag">🎖️ 7.ª Edição Ciência na Escola</div>
+                    <h3><a href="https://aevouzela.net" target="_blank">Jogo do 24 & Ilha Lexia</a></h3>
+                    <p>Adaptação informática e software pedagógico para computadores e quadros interativos. Desenvolvido para potenciar o cálculo mental e a consolidação aritmética (Fundação Ilídio Pinho).</p>
+                </div>
+                <a href="https://aevouzela.net" target="_blank" class="btn-project">Ver Software &rarr;</a>
+            </div>
+
+            <!-- PROJETO BIOSP_Y -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="tag">🌱 9.ª Edição Ciência na Escola</div>
+                    <h3><a href="https://aevouzela.net" target="_blank">BioSpy - Vida Selvagem</a></h3>
+                    <p>Projeto de monitorização ambiental com câmaras de vídeo em tempo real, permitindo a observação e recolha de dados biológicos pela comunidade escolar (Fundação Ilídio Pinho).</p>
+                </div>
+                <a href="https://aevouzela.net" target="_blank" class="btn-project">Ver Monitorização &rarr;</a>
             </div>
         </div>
 
@@ -194,47 +253,22 @@
         <h2>Liderança & Transição Digital nas Escolas</h2>
         <div class="projects-grid">
             <div class="card">
-                <div class="tag">💻 Coordenação Estratégica</div>
-                <h3>Coordenador TIC / Equipa PTE</h3>
-                <p>Responsável pela gestão e planeamento tecnológico, migração de redes locais (LAN) e implementação do Plano Tecnológico da Educação (2007-2012).</p>
+                <div class="card-content">
+                    <div class="tag">💻 Coordenação Estratégica</div>
+                    <h3>Coordenador TIC / Equipa PTE</h3>
+                    <p>Responsável pela gestão e planeamento tecnológico, migração de redes locais (LAN) e implementação do Plano Tecnológico da Educação (2007-2012).</p>
+                </div>
             </div>
 
             <div class="card">
-                <div class="tag">📊 Gestão de Dados & Exames</div>
-                <h3>Técnico Responsável PAEB/ENEB</h3>
-                <p>Supervisão técnica de plataformas nacionais, tratamento estatístico de dados e apoio à avaliação e exames nacionais no Agrupamento de Escolas.</p>
+                <div class="card-content">
+                    <div class="tag">📊 Gestão de Dados & Exames</div>
+                    <h3>Técnico Responsável PAEB/ENEB</h3>
+                    <p>Supervisão técnica de plataformas nacionais, tratamento estatístico de dados e apoio à avaliação e exames nacionais no Agrupamento de Escolas.</p>
+                </div>
             </div>
 
             <div class="card">
-                <div class="tag">🤖 Futuro & Tecnologia</div>
-                <h3>Clubes de Programação e Robótica</h3>
-                <p>Implementação e dinamização de atividades práticas de introdução à robótica para alunos do 1.º e 2.º ciclo.</p>
-            </div>
-        </div>
-
-        <!-- SECÇÃO 3 -->
-        <h2>Capacitação & Formação de Adultos</h2>
-        <div class="projects-grid">
-            <div class="card">
-                <div class="tag">🏫 Formação de Docentes</div>
-                <h3>Inovação em Sala de Aula</h3>
-                <p>Dinamizador de oficinas de formação acreditada sobre Quadros Interativos Multimédia, Segurança na Internet, Cyberbullying e ferramentas Cloud.</p>
-            </div>
-
-            <div class="card">
-                <div class="tag">💼 Modernização Administrativa</div>
-                <h3>Software Escola 360 & Ferramentas Digitais</h3>
-                <p>Formador da Direção-Geral da Educação (DGE) focado na capacitação digital de Assistentes Técnicos e Operacionais da região de Lafões.</p>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- RODAPÉ -->
-    <footer>
-        <p><strong>Contacto:</strong> paulofdr@gmail.com | Telemóvel: 965633380</p>
-        <p>&copy; 2026 Paulo Ribeiro. Portefólio Digital alojado no GitHub Pages.</p>
-    </footer>
-
-</body>
-</html>
+                <div class="card-content">
+                    <div class="tag">🤖 Futuro & Tecnologia</div>
+                    <h3>Clubes de Programação e Robótica</h3>
