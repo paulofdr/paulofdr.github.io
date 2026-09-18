@@ -25,10 +25,12 @@
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.7;
+            scroll-behavior: smooth;
         }
 
         /* HEADER */
         header {
+			margin-top: 70px;
             background: linear-gradient(135deg, var(--primary), #0f172a);
             color: var(--white);
             text-align: center;
@@ -195,10 +197,120 @@
                 padding: 1.5rem;
             }
         }
+		/* MENU FIXO */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0f172a;
+    padding: 0.8rem 2rem;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* MENU DESKTOP */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-menu li a:hover {
+    color: var(--secondary);
+}
+
+/* BOTÃO HAMBÚRGUER */
+.nav-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* MENU RESPONSIVO */
+@media (max-width: 800px) {
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0f172a;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 0;
+        display: none;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        font-size: 1.1rem;
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+}
+
     </style>
 </head>
-<!---------------------------------------------------------------------->
+
 <body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">Paulo Ribeiro</div>
+
+        <!-- Botão hambúrguer -->
+        <div class="nav-toggle" id="nav-toggle">
+            ☰
+        </div>
+
+        <!-- Links do menu -->
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#percursos">Percurso</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#lideranca">Liderança</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#timeline">Linha do Tempo</a></li>
+			<li><a href="#conferencias">Conferências</a></li>
+			<li><a href="#competencias">Competências</a></li>
+       <!-- <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#voluntariado">Voluntariado</a></li> -->
+        </ul>
+    </div>
+</nav>
+
+
 
 <header>
     <h1>Paulo Fernando Dias Ribeiro</h1>
@@ -207,27 +319,34 @@
 </header>
 
 <main class="container">
-<!---------------------------------------------------------------------->
+    <!-- SOBRE MIM -->
+<section id="sobre">
     <h2>Sobre Mim</h2>
     <div class="about-section">
         <p>Sou um profissional de educação apaixonado pelo impacto que a tecnologia pode ter na aprendizagem. Licenciado em Ensino de Matemática e Ciências da Natureza, combinei o meu percurso pedagógico com a frequência da Licenciatura em Engenharia Informática, desenvolvendo um perfil único focado na inovação digital em ambiente escolar.</p>
         <p>Ao longo de mais de duas décadas de carreira, tenho atuado na vanguarda da transição digital nas escolas: desde o desenvolvimento e programação de software educativo premiado a nível nacional, até à coordenação estratégica de equipas TIC e formação contínua de docentes e funcionários administrativos.</p>
     </div>
+</section>
+    <div class="section-divider"></div>
+
+    <!-- PERCURSO PROFISSIONAL -->
+<section id="percursos">
+    <h2>Percurso Profissional</h2>
+    <div class="about-section">
+        <p>Ao longo de mais de duas décadas, desenvolvi um percurso profissional diversificado, lecionando em múltiplos contextos educativos, desde escolas básicas, secundárias, ensino de adultos e formação profissional.</p>
+        <p>Iniciei a carreira em 1999, lecionando Matemática e Ciências em escolas públicas de Viseu, Murça, Vouzela, Castro Daire, Albergaria-a-Velha, Ovar e Oliveira de Frades.</p>
+        <p>Participei em projetos inovadores como o “Ensino à Distância” desenvolvido pela Escola Profissional de Carvalhais em parceria com a PT Inovação, e lecionei em programas de inserção profissional promovidos por câmaras municipais e centros de emprego.</p>
+        <p>Entre 2007 e 2012, assumi funções de Coordenador TIC/Equipa PTE na Escola Básica de Vouzela, liderando a migração de redes LAN e a implementação do Plano Tecnológico da Educação.</p>
+        <p>Exerci funções como Técnico Responsável pelo programa PAEB e ENEB, assegurando a gestão técnica das Provas Nacionais de Aferição e Exames do 2.º Ciclo.</p>
+        <p>Entre 2010 e 2014, fui assessor no Centro de Formação de Associação de Escolas Castro Daire/Lafões, e entre 2025 e 2026 desempenhei funções como Técnico Especializado no mesmo centro.</p>
+        <p>De 2021 a 2025, exerci funções como Assistente Técnico nos Serviços Administrativos do Agrupamento de Escolas de Vouzela, no âmbito da municipalização do ensino.</p>
+    </div>
+</section>
 
     <div class="section-divider"></div>
-<!---------------------------------------------------------------------->
-<h2>Percurso Profissional</h2>
-<div class="about-section">
-    <p>Ao longo de mais de duas décadas, desenvolvi um percurso profissional diversificado, lecionando em múltiplos contextos educativos, desde escolas básicas, secundárias, ensino de adultos e formação profissional.</p>
-    <p>Iniciei a carreira em 1999, lecionando Matemática e Ciências em escolas públicas de Viseu, Murça, Vouzela, Castro Daire, Albergaria-a-Velha, Ovar e Oliveira de Frades.</p>
-    <p>Participei em projetos inovadores como o “Ensino à Distância” em parceria com a PT Inovação, e lecionei em programas de inserção profissional.</p>
-    <p>Entre 2007 e 2012, assumi funções de Coordenador TIC/Equipa PTE na Escola Básica de Vouzela, liderando a migração de redes LAN e a implementação do Plano Tecnológico da Educação.</p>
-    <p>Exerci funções como Técnico PAEB/ENEB, assegurando a gestão técnica das Provas Nacionais de Aferição e Exames.</p>
-    <p>Entre 2010 e 2014, fui assessor no Centro de Formação de Associação de Escolas Castro Daire/Lafões, e entre 2025 e 2026 desempenhei funções como Técnico Especializado no mesmo centro.</p>
-    <p>De 2021 a 2025, exerci funções como Assistente Técnico nos Serviços Administrativos do Agrupamento de Escolas de Vouzela.</p>
-</div>
-  
-<!---------------------------------------------------------------------->
+
+    <!-- PROJETOS DE INOVAÇÃO -->
+<section id="projetos">
     <h2>Projetos de Inovação & Software Premiado</h2>
     <div class="projects-grid">
 
@@ -262,7 +381,9 @@
     </div>
 
     <div class="section-divider"></div>
-<!---------------------------------------------------------------------->
+</section>
+    <!-- LIDERANÇA & TRANSIÇÃO DIGITAL -->
+<section id="lideranca">
     <h2>Liderança & Transição Digital nas Escolas</h2>
     <div class="projects-grid">
 
@@ -287,8 +408,10 @@
     </div>
 
     <div class="section-divider"></div>
-<!---------------------------------------------------------------------->
-    <h2>Capacitação & Formação de Adultos</h2>
+</section>
+    <!-- CAPACITAÇÃO & FORMAÇÃO -->
+<section id="formacao">
+    <h2>Capacitação & Formação</h2>
     <div class="projects-grid">
 
         <div class="card">
@@ -305,146 +428,174 @@
 
     </div>
 
-</main>
-<!---------------------------------------------------------------------->
+    <div class="section-divider"></div>
+</section>
 
-<h2>Linha do Tempo da Carreira</h2>
-<div class="projects-grid">
-
-    <div class="card">
-        <div class="tag">1999–2004</div>
-        <h3>Primeiros anos de docência</h3>
-        <p>Lecionei Matemática e Ciências em diversos estabelecimentos de ensino de Viseu, Murça, Vouzela, Castro Daire e Albergaria-a-Velha.</p>
-    </div>
-
-    <div class="card">
-        <div class="tag">2007–2012</div>
-        <h3>Coordenação TIC / PTE</h3>
-        <p>Liderança tecnológica, migração de redes LAN, formação interna e implementação do Plano Tecnológico da Educação.</p>
-    </div>
-
-    <div class="card">
-        <div class="tag">2008–2022</div>
-        <h3>Projetos financiados e premiados</h3>
-        <p>Desenvolvimento de software educativo e projetos científicos financiados pela Fundação Ilídio Pinho e outras entidades.</p>
-    </div>
-
-    <div class="card">
-        <div class="tag">2010–2014</div>
-        <h3>Assessor CFAE</h3>
-        <p>Apoio técnico, pedagógico e organizacional ao Centro de Formação de Associação de Escolas Castro Daire/Lafões.</p>
-    </div>
-
-    <div class="card">
-        <div class="tag">2021–2025</div>
-        <h3>Serviços Administrativos</h3>
-        <p>Assistente Técnico no AE Vouzela, no âmbito da municipalização do ensino.</p>
-    </div>
-
-    <div class="card">
-        <div class="tag">2025–2026</div>
-        <h3>Técnico Especializado CFAE</h3>
-        <p>Gestão de formação, apoio técnico e tratamento estatístico das ações de formação.</p>
-    </div>
-
-</div>
-
-<!---------------------------------------------------------------------->
+<!-- FORMAÇÃO ACREDITADA & FORMADOR -->
     <h2>Formação Acreditada & Atividade como Formador</h2>
-<div class="about-section">
-    <p>Dinamizei dezenas de ações de formação acreditada para docentes, assistentes técnicos e operacionais, com destaque para:</p>
-    <p></p>
-    <ul>
-        <li>Quadros Interativos Multimédia</li>
-        <li>Segurança na Internet e Cyberbullying</li>
-        <li>Ferramentas Cloud e Google Workspace</li>
-        <li>Competências Digitais para Assistentes Técnicos</li>
-        <li>Software Escola 360</li>
-        <li>Programação e Robótica</li>
-        <li>Ferramentas digitais para serviços administrativos</li>
-        <li>Formador certificado pela Direção-Geral da Educação e pelo CFAE Castro Daire/Lafões</li>
-    </ul>
-</div>
-<!---------------------------------------------------------------------->   
-
-<h2>Conferências, Seminários & Jornadas</h2>
-<div class="about-section">
-    <p>Participei em mais de 40 eventos de formação contínua, incluindo:</p>
-    <p></p>
-    <ul>
-        <li>Jornadas de Matemática (ViseuMat, MatViseu)</li>
-        <li>Workshops Casa das Ciências</li>
-        <li>Seminários internacionais Vouzela Ativo</li>
-        <li>Formação contínua em Matemática (122h, Muito Bom)</li>
-        <li>Formações em robótica, programação, bases de dados, e-business e ferramentas digitais</li>
-    </ul>
-</div>
-<!---------------------------------------------------------------------->   
-
-<h2>Competências Técnicas</h2>
-<div class="projects-grid">
-
-    <div class="card">
-        <h3>Programação & Software Educativo</h3>
-        <p>Desenvolvimento de jogos educativos, simuladores e aplicações pedagógicas.</p>
+    <div class="about-section">
+        <p>Dinamizei dezenas de ações de formação acreditada para docentes, assistentes técnicos e operacionais, com destaque para:</p>
+		<p></p>
+        <ul>
+            <li>Quadros Interativos Multimédia</li>
+            <li>Segurança na Internet e Cyberbullying</li>
+            <li>Ferramentas Cloud e Google Workspace</li>
+            <li>Competências Digitais para Assistentes Técnicos</li>
+            <li>Software Escola 360</li>
+            <li>Programação e Robótica</li>
+            <li>Ferramentas digitais para serviços administrativos</li>
+			<li>Formador certificado pela Direção-Geral da Educação e pelo CFAE Castro Daire/Lafões</li>
+        </ul>
     </div>
 
-    <div class="card">
-        <h3>Redes & Infraestruturas</h3>
-        <p>Migração de redes LAN, gestão de equipamentos TIC, suporte técnico.</p>
+    <div class="section-divider"></div>
+
+
+    <!-- LINHA DO TEMPO DA CARREIRA -->
+<section id="timeline">
+    <h2>Linha do Tempo da Carreira</h2>
+    <div class="projects-grid">
+
+        <div class="card">
+            <div class="tag">1999–2004</div>
+            <h3>Primeiros anos de docência</h3>
+            <p>Lecionei Matemática e Ciências em diversos estabelecimentos de ensino de Viseu, Murça, Vouzela, Castro Daire e Albergaria-a-Velha.</p>
+        </div>
+
+        <div class="card">
+            <div class="tag">2007–2012</div>
+            <h3>Coordenação TIC / PTE</h3>
+            <p>Liderança tecnológica, migração de redes LAN, formação interna e implementação do Plano Tecnológico da Educação.</p>
+        </div>
+
+        <div class="card">
+            <div class="tag">2008–2022</div>
+            <h3>Projetos financiados e premiados</h3>
+            <p>Desenvolvimento de software educativo e projetos científicos financiados pela Fundação Ilídio Pinho e outras entidades.</p>
+        </div>
+
+        <div class="card">
+            <div class="tag">2010–2014</div>
+            <h3>Assessor CFAE</h3>
+            <p>Apoio técnico, pedagógico e organizacional ao Centro de Formação de Associação de Escolas Castro Daire/Lafões.</p>
+        </div>
+
+        <div class="card">
+            <div class="tag">2021–2025</div>
+            <h3>Serviços Administrativos</h3>
+            <p>Assistente Técnico no AE Vouzela, no âmbito da municipalização do ensino.</p>
+        </div>
+
+        <div class="card">
+            <div class="tag">2025–2026</div>
+            <h3>Técnico Especializado CFAE</h3>
+            <p>Gestão de formação, apoio técnico e tratamento estatístico das ações de formação.</p>
+        </div>
+
     </div>
 
-    <div class="card">
-        <h3>Ferramentas Digitais</h3>
-        <p>Office, Google Workspace, software de gestão escolar</p>
-    </div>
-
-    <div class="card">
-        <h3>Robótica & Programação</h3>
-        <p>Clubes de robótica, atividades práticas para 1.º e 2.º ciclo.</p>
-    </div>
-
-</div>
-
+    <div class="section-divider"></div>
+</section>
     
-<!----------------------------------------------------------------------> 
-<h2>Aulas Particulares de Matemática</h2>
-<div class="about-section">
-    <p>Desde 1999, leciono Matemática a alunos do Ensino Básico e Secundário, com foco em:</p>
-    <p></p>
-    <ul>
-        <li>Cálculo e raciocínio matemático</li>
-        <li>Preparação para exames</li>
-        <li>Recuperação de aprendizagens</li>
-        <li>Desenvolvimento de autonomia e confiança</li>
-        <li>Disponível para acompanhamento personalizado, presencial ou online</li>
-    </ul>
-</div>
-    
-<!---------------------------------------------------------------------->   
-    
-<h2>Associações & Voluntariado</h2>
-<div class="projects-grid">
-
-    <div class="card">
-        <div class="tag">Desde 2009</div>
-        <h3>Dirigente Associativo</h3>
-        <p>Membro da direção da ADDA – Associação cultural e desportiva de Vouzela.</p>
+    <!-- CONFERÊNCIAS, SEMINÁRIOS & JORNADAS -->
+<section id="conferencias">
+    <h2>Conferências, Seminários & Jornadas</h2>
+    <div class="about-section">
+        <p>Participei em mais de 40 eventos de formação contínua, incluindo:</p>
+		<p></p>
+        <ul>
+            <li>Jornadas de Matemática (ViseuMat, MatViseu)</li>
+            <li>Workshops Casa das Ciências</li>
+            <li>Seminários internacionais Vouzela Ativo</li>
+            <li>Formação contínua em Matemática (122h, Muito Bom)</li>
+            <li>Formações em robótica, programação, bases de dados, e-business e ferramentas digitais</li>
+        </ul>
     </div>
 
-    <div class="card">
-        <div class="tag">Desde 2014</div>
-        <h3>Bombeiros Voluntários de Vouzela</h3>
-        <p>Membro da Direção da Associação Humanitária.</p>
+    <div class="section-divider"></div>
+</section>
+    <!-- COMPETÊNCIAS TÉCNICAS -->
+<section id="competencias">
+    <h2>Competências Técnicas</h2>
+    <div class="projects-grid">
+
+        <div class="card">
+            <h3>Programação & Software Educativo</h3>
+            <p>Desenvolvimento de jogos educativos, simuladores e aplicações pedagógicas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Redes & Infraestruturas</h3>
+            <p>Migração de redes LAN, gestão de equipamentos TIC, suporte técnico.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ferramentas Digitais</h3>
+            <p>Office, Google Workspace, software de gestão escolar.</p>
+        </div>
+
+        <div class="card">
+            <h3>Robótica & Programação</h3>
+            <p>Clubes de robótica, atividades práticas para 1.º e 2.º ciclo.</p>
+        </div>
+
     </div>
 
-</div>
-    
-<!---------------------------------------------------------------------->   
+    <div class="section-divider"></div>
+</section>
+    <!-- AULAS PARTICULARES -->
+    <h2>Aulas Particulares de Matemática</h2>
+    <div class="about-section">
+        <p>Desde 1999, leciono Matemática a alunos do Ensino Básico e Secundário, com foco em:</p>
+		<p></p>
+        <ul>
+            <li>Cálculo e raciocínio matemático</li>
+            <li>Preparação para exames</li>
+            <li>Recuperação de aprendizagens</li>
+            <li>Desenvolvimento de autonomia e confiança</li>
+            <li>Disponível para acompanhamento personalizado, presencial ou online</li>
+        </ul>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ASSOCIAÇÕES & VOLUNTARIADO -->
+    <h2>Associações & Voluntariado</h2>
+    <div class="projects-grid">
+
+        <div class="card">
+            <div class="tag">Desde 2009</div>
+            <h3>Dirigente Associativo</h3>
+            <p>Membro da direção da ADDA – Associação cultural e desportiva de Vouzela.</p>
+        </div>
+
+        <div class="card">
+            <div class="tag">Desde 2014</div>
+            <h3>Bombeiros Voluntários de Vouzela</h3>
+            <p>Membro da Direção da Associação Humanitária.</p>
+        </div>
+
+    </div>
+
+</main>
+
 <footer>
     <p><strong>Contacto:</strong> paulofdr@gmail.com | Telemóvel: 965633380</p>
     <p>&copy; 2026 Paulo Ribeiro. Portefólio Digital alojado no GitHub Pages.</p>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("nav-toggle");
+        const menu = document.getElementById("nav-menu");
+
+        if (toggle && menu) {
+            toggle.addEventListener("click", () => {
+                menu.classList.toggle("show");
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
